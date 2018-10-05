@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Devenez expert Chefclub</title>
+	<meta name="description" content="Imaginez, recevez et tester les produits gratuitement." />
+	<meta name="keywords"  content="" />
+	<meta name="Resource-type" content="Document" />
+	
+	<link rel="shortcut icon" type="image/png" href="imgs/favicon.png">
+
+	<link rel="stylesheet" type="text/css" href="../dist/fullpage.css" />
+	<link rel="stylesheet" type="text/css" href="../dist/zoombox/zoombox.css" />
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+	
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet"> 
+	
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+</head>
+<body>
+
+<div id="fullpage">
+	<div class="section hero-image" id="section0">
+		<header>
+			<div class="header">
+				<h1>
+					<a href="#">
+						<img src="imgs/chefclub-sauces.png" alt="Chefclub les sauces logo">
+					</a>
+				</h1>
+			</div>
+		</header>	
+		<div class="intro">
+			<h2>Devenez expert Chefclub</h2>
+			<p>Imaginez, recevez et tester les produits gratuitement.</p>
+			<a href="https://www.youtube.com/watch?v=AcECmZpw1hE" class="zoombox"><img src="imgs/play-btn.png"  alt="1"/></a>
+		</div>
+		<a href="#nousSauçons" id="icnDown"></a>
+	</div>
+	<div class="fp-bg">
+	<div class="section" id="section1">
+		<div class="content">
+			<h2>Nous sauçons.</h2>
+			<p>Chez Chefclub, nous aimons les sauces. <br />En fait, nous ne pouvons pas nous en passer !</p>
+			<img src="imgs/sauces.gif"  alt="nous sauçons" width="312" height="312"/>
+		</div>
+	</div>
+	<div class="section" id="section2">
+		<div class="content">
+			<h2>Ils saucent.</h2>
+			<p>“Ils” ? Ce sont tous ceux qui mettent en bouteille puis en rayons des sauces aux compositions discutables et dont les ingrédients ont des origines incertaines.</p>
+			<img src="imgs/ils-saucent.png"  alt="ils saucent"/>
+		</div>
+	</div>
+	<div class="section" id= content"section3">
+		<div class="together content">
+			<h2>Sauçons ensemble !</h2>
+			<p>Participez à la création des sauces Chefclub, savoureuses, gourmandes, saines et fabriquées dans la transparence.</p>
+			<p class="invit">Nous invitons 30 membres de la communauté Chefclub dans notre atelier parisien pour passer une journée à imaginer, tester et goûter les recettes des moutarde et ketchup. </p>
+			<img src="imgs/ensemble.png"  alt="sauçont ensemble"/>
+		</div>
+	</div>
+	<div class="section" id="section4">
+		<div class="recruit content">
+			<h2>Tout le monde peut devenir expert chefclub</h2>
+			<p>Novice, amateur ou cuisinier confirmé,Vous participerez à la réflexion et la conception de nouveaux produits et recevrez gratuitement à la maison les nouveautés afin de partager vos avis et commentaires.</p>
+			<img src="imgs/recruit.png"  alt="we want you"/>
+		</div>
+	</div>
+	</div>
+	<div class="section form" id="section5">
+		<div class="outro">
+			<h2><a href="#" id="show">Je souhaite participer</a></h2>
+			
+			<div class="typeform-widget" data-url="https://expertschefclub.typeform.com/to/AH7KFW" data-transparency="50" data-hide-headers=true data-hide-footer=true style="width: 100%; height: 500px;"></div> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm", b="https://embed.typeform.com/"; if(!gi.call(d,id)) { js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script> <div style="font-family: Sans-Serif;font-size: 12px;color: #999;opacity: 0.5; padding-top: 5px;"> powered by <a href="https://admin.typeform.com/signup?utm_campaign=AH7KFW&utm_source=typeform.com-12413311-Basic&utm_medium=typeform&utm_content=typeform-embedded-poweredbytypeform&utm_term=EN" style="color: #999" target="_blank">Typeform</a> </div>
+
+			<img src="imgs/chef-sauces.png"  alt="devenu expert"/>
+		</div>
+		<footer>
+			<div class="footer">
+				<p>© Copyright 2018 ChefClub Network. Tous droits réservés.</p>
+			</div>
+		</footer>	
+		
+	</div>
+</div>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script type="text/javascript" src="../dist/main.js"></script>
+<script type="text/javascript" src="../dist/fullpage.js"></script>
+<script type="text/javascript" src="../dist/fullpage.parallax.min.js"></script>
+<script type="text/javascript" src="../dist/fullpage.extensions.min.js"></script>
+<script type="text/javascript" src="../dist/zoombox/zoombox.js"></script>
+
+
+<script type="text/javascript">
+    var myFullpage = new fullpage('#fullpage', {
+        anchors: ['intro', 'nousSauçons', 'ilsSaucent', 'sauçonsEnsemble', 'recrutement', 'participer'],
+        navigation: true,
+        navigationPosition: 'right',
+        // navigationTooltips: ['Devenez expert', 'Nous sauçons', 'Ils saucent', 'Sauçons Ensemble', 'Recrutement', 'Participer'],
+        autoScrolling:false
+    });
+    
+    $(window).bind("load resize scroll",function(e) {
+    var x = $(window).scrollTop();
+    var y = $(window).scrollTop();
+
+    $(".fp-bg").filter(function() {
+        return $(this).offset().top < (y + $(window).height()) &&
+               $(this).offset().top + $(this).height() > y;
+    }).css('background-position', + parseInt(x / 18) + 'px ' + parseInt(-y / 6) + 'px');
+	});
+
+    $(function(){
+        $('a.zoombox').zoombox({        
+        	opacity : 0.6, // Black overlay opacity
+        	width : 800, // Default width
+        	height : 600, // Default height
+        	autoplay : true // Autoplay for video
+        });
+    });
+    
+    $(function(){
+	    $("#show").click(function(){
+	        $(".typeform-widget").show();
+    });
+    
+});
+
+</script>
+
+</body>
+</html>

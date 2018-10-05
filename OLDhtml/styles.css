@@ -1,0 +1,753 @@
+@CHARSET "ISO-8859-1";
+/* Reset CSS
+ * --------------------------------------- */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+form,fieldset,input,textarea,p,blockquote,th,td {
+    padding: 0;
+    margin: 0;
+}
+a{
+	text-decoration:none;
+}
+table {
+    border-spacing: 0;
+}
+fieldset,img {
+    border: 0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+    font-weight: normal;
+    font-style: normal;
+}
+strong{
+	font-weight: bold;
+}
+ol,ul {
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+caption,th {
+    text-align: left;
+
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+    font-size: 100%;
+    margin:0;
+    padding:0;
+    color:#444;
+}
+q:before,q:after {
+    content:'';
+}
+abbr,acronym { border: 0;
+}
+
+/* Custom Fonts
+ * --------------------------------------- */
+@font-face {
+    font-family: 'League Spartan';
+    src: url('../fonts/leaguespartan-bold.eot');
+    src: url('../fonts/leaguespartan-bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/leaguespartan-bold.woff2') format('woff2'),
+         url('../fonts/leaguespartan-bold.woff') format('woff'),
+         url('../fonts/leaguespartan-bold.ttf') format('truetype'),
+         url('../fonts/leaguespartan-bold.svg#league_spartanbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Custom CSS
+ * --------------------------------------- */
+body{
+	font-family: arial,helvetica;
+	color: #333;
+	color: rgba(0,0,0,0.5);
+}
+.wrap{
+	margin-left: auto;
+	margin-right: auto;
+	width: 960px;
+	position: relative;
+}
+h1{
+	font-size: 6em;
+}
+p{
+	font-size: 2em;
+}
+.intro p{
+	/*width: 50%;
+	margin: 0 auto;*/
+	font-size: 1.7em;
+}
+.section{
+	text-align:center;
+}
+#menu li {
+	display:inline-block;
+	margin: 10px;
+	color: #000;
+	background:#fff;
+	background: rgba(255,255,255, 0.5);
+	-webkit-border-radius: 10px;
+            border-radius: 10px;
+}
+#menu li.active{
+	background:#666;
+	background: rgba(0,0,0, 0.5);
+	color: #fff;
+}
+#menu li a{
+	text-decoration:none;
+	color: #000;
+}
+#menu li.active a:hover{
+	color: #000;
+}
+#menu li:hover{
+	background: rgba(255,255,255, 0.8);
+}
+#menu li a,
+#menu li.active a{
+	padding: 9px 18px;
+	display:block;
+}
+#menu li.active a{
+	color: #fff;
+}
+#menu{
+	position:fixed;
+	top:0;
+	left:0;
+	height: 40px;
+	z-index: 70;
+	width: 100%;
+	padding: 0;
+	margin:0;
+}
+.twitter-share-button{
+	position: fixed;
+	z-index: 99;
+	right: 149px;
+	top: 9px;
+}
+#download{
+	margin: 10px 0 0 0;
+	padding: 15px 10px;
+	color: #fff;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+	background-color: #49afcd;
+	background-image: -moz-linear-gradient(top, #5bc0de, #2f96b4);
+	background-image: -ms-linear-gradient(top, #5bc0de, #2f96b4);
+	background-image: -webkit-gradient(linear,0 0,0 100%,from( #5bc0de),to( #2f96b4));
+	background-image: -webkit-linear-gradient(top, #5bc0de, #2f96b4);
+	background-image: -o-linear-gradient(top, #5bc0de, #2f96b4);
+	background-image: linear-gradient(top, #5bc0de, #2f96b4);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5bc0de', endColorstr='#2f96b4', GradientType=0);
+	border-color: #2f96b4 #2f96b4 #1f6377;
+	border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.25);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	vertical-align: middle;
+	cursor: pointer;
+	display: inline-block;
+	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+	-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+	box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+}
+#download a{
+	text-decoration:none;
+	color:#fff;
+}
+#download:hover{
+	text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+	background-color: #2F96B4;
+	background-position: 0 -15px;
+	-webkit-transition: background-position .1s linear;
+	-moz-transition: background-position .1s linear;
+	-ms-transition: background-position .1s linear;
+	-o-transition: background-position .1s linear;
+	transition: background-position .1s linear;
+}
+#infoMenu{
+	height: 20px;
+	color: #f2f2f2;
+	position:fixed;
+	z-index:70;
+	bottom:0;
+	width:100%;
+	text-align:right;
+	font-size:0.9em;
+	padding:8px 0 8px 0;
+}
+#infoMenu ul{
+	padding: 0 40px;
+}
+#infoMenu li a{
+	display: block;
+	margin: 0 22px 0 0;
+	color: #333;
+}
+#infoMenu li a:hover{
+	text-decoration:underline;
+}
+#infoMenu li{
+	display:inline-block;
+	position:relative;
+}
+#examplesList{
+	display:none;
+	background: #282828;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	padding: 20px;
+	float: left;
+	position: absolute;
+	bottom: 29px;
+	right: 0;
+	width:638px;
+	text-align:left;
+}
+#examplesList ul{
+	padding:0;
+}
+#examplesList ul li{
+	display:block;
+	margin: 5px 0;
+}
+#examplesList ul li a{
+	color: #BDBDBD;
+	margin:0;
+}
+#examplesList ul li a:hover{
+	color: #f2f2f2;
+}
+#examplesList .column{
+	float: left;
+	margin: 0 20px 0 0;
+}
+#examplesList h3{
+	color: #f2f2f2;
+	font-size: 1.2em;
+	margin: 0 0 15px 0;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+	-moz-box-shadow: 0 1px 0 rgba(255,255,255,0.1);
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+	padding: 0 0 5px 0;
+}
+
+/* SIDEBAR NAVIGATION */
+.sidebar {position:absolute; right:0;}
+.dot {display:inline-block; width:10px; height:10px; background-color:rgba(255,255,255,.3); border-radius:10px; z-index:999; content:''; color:transparent; font-size:14px; line-height:10px; vertical-align:middle; margin:5px 0 5px 0; font-weight:300;}
+.dot:hover {background-color:rgba(255,255,255,.8); color:rgba(255,255,255,.8);}
+.dot span {margin:0px 0px 20px 15px; position:relative; top:0px; left:-80px;}
+nav {width:100px; height:200px;/*background-color:rgb(240,240,240); border:solid 1px rgb(220,220,220);*/ padding:0 0px; position:fixed; top:50%; right:20px; transform: translate(0, -50%); z-index: 10000; text-align:right;}
+nav ul li a {text-decoration:none;}
+nav ul {list-style-type:none; margin:0; padding:0;}
+.name-active {color:rgba(255,255,255,.8); background-color:#FFD95F; text-align:right;}
+
+
+#cd-vertical-nav {
+  position: fixed;
+  right: 40px;
+  top: 50%;
+  bottom: auto;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+#cd-vertical-nav li {
+  text-align: right;
+}
+
+#cd-vertical-nav a {
+  display: inline-block;
+  /* prevent weird movements on hover when you use a CSS3 transformation - webkit browsers */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+#cd-vertical-nav a:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#cd-vertical-nav a span {
+  float: right;
+  display: inline-block;
+  -webkit-transform: scale(0.6);
+  -moz-transform: scale(0.6);
+  -ms-transform: scale(0.6);
+  -o-transform: scale(0.6);
+  transform: scale(0.6);
+}
+
+#cd-vertical-nav a:hover span {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+
+#cd-vertical-nav a:hover .cd-label {
+  opacity: 1;
+}
+
+#cd-vertical-nav a.is-selected .cd-dot {
+  background-color: white;
+}
+
+#cd-vertical-nav .cd-dot {
+  position: relative;
+  /* we set a top value in order to align the dot with the label. If you change label's font, you may need to change this top value*/
+  top: 8px;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background-color: #d88683;
+  -webkit-transition: -webkit-transform 0.2s, background-color 0.5s;
+  -moz-transition: -moz-transform 0.2s, background-color 0.5s;
+  transition: transform 0.2s, background-color 0.5s;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+
+#cd-vertical-nav .cd-label {
+  position: relative;
+  margin-right: 10px;
+  padding: .4em .5em;
+  color: white;
+  font-size: 14px;
+  font-size: 0.875rem;
+  -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+  -moz-transition: -moz-transform 0.2s, opacity 0.2s;
+  transition: transform 0.2s, opacity 0.2s;
+  opacity: 0;
+  -webkit-transform-origin: 100% 50%;
+  -moz-transform-origin: 100% 50%;
+  -ms-transform-origin: 100% 50%;
+  -o-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+}
+
+
+/* Demos Menu
+ * --------------------------------------- */
+ #demosMenu{
+	position:fixed;
+	bottom: 10px;
+	right:10px;
+	z-index: 999;
+ }
+
+	/* Style for our header texts
+	* --------------------------------------- */
+	h1{
+		font-size: 5em;
+		font-family: arial,helvetica;
+		color: #fff;
+		margin:0;
+	}
+	.intro h2, .intro p, .outro h2, .outro p{
+		color: #fff;
+	}
+
+	/* Centered texts in each section
+	* --------------------------------------- */
+	.section{
+	}
+
+	/* Pattern background in each section
+	* --------------------------------------- */
+	.fp-bg, .main {
+			text-align:center;
+			background-color: #fff;
+			background-image: url('imgs/bg-pattern.png');
+			background-repeat: repeat;
+			background-attachment: scroll;
+			padding: 45px 0;
+	}
+
+	
+	/* Overwriting styles for control arrows for slides
+	* --------------------------------------- */
+	.controlArrow.prev {
+		left: 50px;
+	}
+	.controlArrow.next{
+		right: 50px;
+	}
+
+
+	/* Bottom menu
+	* --------------------------------------- */
+	#infoMenu li a {
+		color: #fff;
+	}
+
+header {
+	height: 30px;
+	display: block;
+	width: 100%;
+	background: #fff;
+	z-index: 9;
+	text-align: center;
+	color: #f2f2f2;
+	padding: 20px 0 20px 0;
+	position: absolute;
+	top: 0;
+}
+
+.header {
+	width: 70%;
+	text-align: left;
+	margin: 0 auto;
+}
+
+.header h1 {
+	font-size: 100%;
+}
+
+/* The hero image */
+.hero-image {
+    /* The image used */
+    background-image: url("imgs/bg-header.jpg");
+    width: 100vw;
+    height: 100vh;
+
+    /* Set a specific height */
+    height: 50%;
+
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#icnDown {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    margin-left: -13px;
+}
+
+#icnDown {
+    display: block;
+    background: url(imgs/arrow-down.png) left top no-repeat;
+    width: 30px;
+    height: 16px;
+}
+
+.hero {
+    /* Sizing */
+    width: 100vw;
+    height: 100vh;
+    
+    /* Flexbox stuff */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Text styles */
+    text-align: center;
+    
+    /* Background styles */
+    background-image: url(imgs/bg-header.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.hero h2, .hero p {
+	color: #fff;
+}
+
+
+h2 {
+	font-family: 'League Spartan';
+	color: #000;
+	font-weight: 700;
+	clear: left;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 3.5em;
+	line-height: 1.3em;
+	margin-bottom: 35px;
+}
+
+p {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	color: #000;
+	font-size: 1.62em;
+	line-height: 1.45em;
+	margin-bottom: 50px;
+}
+
+.invit {
+	font-family: 'League Spartan';
+	text-transform: uppercase;
+	font-size: 18px; 
+	padding: 0 100px;
+}
+
+div.content {
+	width: 65vw;
+	margin: 120px auto;
+	background: #fff;;
+	padding: 45px 130px;
+	text-align: center;
+}
+
+/*div.content {
+    height: 80vh;
+    Background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}*/
+
+.form {
+    /* no image bg */
+    background-image: none;
+    background-color: #d82953;
+    text-align: center;
+    /* Sizing */
+    width: 100vw;
+    height: 80vh;
+}
+
+.typeform-widget {
+	display: none;
+}
+
+.outro h2 {
+    margin-bottom: 60px;
+}
+
+.outro h2 a {
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 40px 50px 20px 50px;
+}
+
+.outro h2 a:hover {
+    color: #d82953;
+    border: 1px solid #fff;
+    background-color: #fff;
+}
+
+footer {
+	height: 80px;
+	display: block;
+	width: 100%;
+	background: #282828;
+	z-index: 9;
+	text-align: center;
+	padding: 20px 0 20px 0;
+}
+
+.footer {
+	width: 70%;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.footer p {
+	color: #fff; font-size: 12px;
+}
+
+
+
+/* iphone 6, 6s, 7, 8 */
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) { 
+	#fp-nav.fp-right {
+		display: none;
+	}
+	
+	.intro img {
+		width: 10%
+	}
+	
+	h2 {
+		font-size: 2.5em;
+		margin-bottom: 25px;
+	}
+	
+	P {
+		font-size: 1.1em;
+		margin-bottom: 40px;
+	}
+	
+	p.invit {
+		padding: 0 5px;
+	}
+	
+	div.content {
+		width: 75%;
+	    padding: 30px;
+	}
+	
+	.outro h2 {
+	    font-size: 1.3em;
+	}
+	
+	.outro h2 a {
+	    padding: 20px 25px 10px 25px;
+	}
+
+
+}
+
+/* iphone 6+, 6s+, 7+, 8+ */
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) { 
+
+	#fp-nav.fp-right {
+		display: none;
+	}
+	
+	.intro img {
+		width: 10%
+	}
+	
+	h2 {
+		font-size: 2.5em;
+		margin-bottom: 25px;
+	}
+	
+	P {
+		font-size: 1.1em;
+		margin-bottom: 40px;
+	}
+	
+	p.invit {
+		padding: 0 5px;
+	}
+	
+	div.content {
+		width: 75%;
+	    padding: 30px;
+	}
+	
+	.outro h2 {
+	    font-size: 1.3em;
+	}
+	
+	.outro h2 a {
+	    padding: 20px 25px 10px 25px;
+	}
+
+}
+
+/* iphone X */
+@media only screen and (min-device-width: 375px) and (max-device-height: 812px) { 
+
+	#fp-nav.fp-right {
+		display: none;
+	}
+	
+	.intro img {
+		width: 10%
+	}
+	
+	h2 {
+		font-size: 2.3em;
+		margin-bottom: 25px;
+	}
+	
+	P {
+		font-size: 1.1em;
+		margin-bottom: 40px;
+	}
+	
+	p.invit {
+		padding: 0 5px;
+	}
+	
+	div.content {
+		width: 75%;
+	    padding: 30px;
+	}
+	
+	.outro h2 {
+	    font-size: 1.3em;
+	}
+	
+	.outro h2 a {
+	    padding: 20px 25px 10px 25px;
+	}
+
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 375px) and (device-height: 640px) { 
+
+	#fp-nav.fp-right {
+		display: none;
+	}
+	
+	#nousSaucons img {
+		width: 100%;
+		height: 100%;
+	}
+
+	#sauconsEnsemble img {
+		width: 100%;
+	}
+
+	h2 {
+		font-size: 1.5em;
+		margin-bottom: 25px;
+	}
+	
+	P {
+		font-size: 1.1em;
+		margin-bottom: 40px;
+	}
+	
+	p.invit {
+		padding: 0 5px;
+	}
+	
+	div.content {
+		width: 75%;
+	    padding: 30px;
+	}
+	
+	.outro h2 {
+	    font-size: 1em;
+	}
+	
+	.outro h2 a {
+	    padding: 20px 25px 10px 25px;
+	}
+}
+
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) { 
+	.outro h2 {
+	    font-size: 2.3em;
+	}
+
+
+}
